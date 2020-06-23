@@ -8,3 +8,9 @@ eureka:
   instance:
     instance-id: search-service:8003
     prefer-ip-address: true
+spring:
+  data:
+    elasticsearch:
+      repositories:
+        enabled : true
+      cluster-nodes:localhost:9300

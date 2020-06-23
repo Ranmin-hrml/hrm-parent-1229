@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: es-server
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch #集群的名称
+      cluster-nodes: 127.0.0.1:9300 #9200是http端口,9300socket端口
+
+server:
+  port: 8003
+
+eureka:
+  instance:
+    hostname: es-server
+    prefer-ip-address: true
+    instance-id: es-server:8003
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

@@ -5,9 +5,11 @@ spring:
     elasticsearch:
       cluster-name: elasticsearch #集群的名称
       cluster-nodes: 127.0.0.1:9300 #9200是http端口,9300socket端口
-
+  profiles: peer1
 server:
   port: 8003
+
+
 
 eureka:
   instance:
@@ -16,4 +18,4 @@ eureka:
     instance-id: es-server:8003
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://peer1/eureka/

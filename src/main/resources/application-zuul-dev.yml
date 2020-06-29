@@ -19,6 +19,9 @@ zuul:
     search:
       path: /search/**
       service-id: search-service
+    user:
+      path: /user/**
+      service-id: user-service
 eureka:
   client:
     serviceUrl:
